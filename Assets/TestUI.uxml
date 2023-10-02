@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="maxButton" />
+    <ui:ScrollView />
+    <ui:ListView focusable="true" />
+    <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" name="maxTF" />
+    <ui:Slider label="Slider" value="42" high-value="100" name="maxSlider" show-input-field="false" />
+</ui:UXML>
