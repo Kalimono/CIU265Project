@@ -17,23 +17,32 @@ public class TheWaitingRoom : MonoBehaviour
     }
 }
 
-public enum Category
+public enum Type
 {
     rank,
     multi,
     single
 }
 
+public enum Category
+{
+    ethical,
+    physical,
+    intellectual
+}
+
 public class Question {
     int phase;
-    int category;
+    Type type;
+    Category category;
     string prompt;
     bool followUp;
     Answer answer;
 
-    public Question(int phase, int category, string prompt, bool followUp)
+    public Question(int phase, Type type, Category category, string prompt, bool followUp)
     {
         this.phase = phase;
+        this.type = type;
         this.category = category;
         this.prompt = prompt;
         this.followUp = followUp;
