@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="RankWindow" style="flex-grow: 1; background-color: rgb(132, 123, 123); padding-top: 20px; padding-right: 200px; padding-bottom: 20px; padding-left: 200px; border-left-color: rgba(43, 43, 43, 0.45); border-right-color: rgba(43, 43, 43, 0.45); border-top-color: rgba(43, 43, 43, 0.45); border-bottom-color: rgba(43, 43, 43, 0.45);">
+        <ui:VisualElement style="flex-grow: 1; min-height: 40%; max-height: 50%; width: auto; height: 50%; background-color: rgba(171, 171, 171, 0.39); border-left-color: rgba(55, 55, 55, 0.68); border-right-color: rgba(55, 55, 55, 0.68); border-top-color: rgba(55, 55, 55, 0.68); border-bottom-color: rgba(55, 55, 55, 0.68); border-top-width: 3px; border-right-width: 3px; border-bottom-width: 3px; border-left-width: 3px;" />
+    </ui:VisualElement>
+</ui:UXML>
