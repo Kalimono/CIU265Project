@@ -21,7 +21,8 @@ public enum Type
 {
     rank,
     multi,
-    single
+    single,
+    input
 }
 
 public enum Category
