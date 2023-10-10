@@ -3,8 +3,8 @@
     "UxmlPath": "Assets/Editor/DragAndDropWindow.uxml",
     "CanvasX": 0,
     "CanvasY": 0,
-    "CanvasWidth": 350,
-    "CanvasHeight": 450,
+    "CanvasWidth": 370,
+    "CanvasHeight": 626,
     "MatchGameView": false,
     "ZoomScale": 1.0,
     "PanOffset": {

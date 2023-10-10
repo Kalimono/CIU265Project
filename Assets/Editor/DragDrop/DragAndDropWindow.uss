@@ -1,0 +1,52 @@
+.slot {
+    width: 160px;
+    height: 60px;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.slot_row {
+    flex-direction: column;
+}
+
+.object {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 10px;
+    background-color: rgb(200, 200, 200);
+}
+
+.text {
+    width: 70;
+    height: 39;
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    border-radius: 10px;
+    background-color: rgb(200, 200, 0);
+}
+
+.spacer {
+    height: 40;
+}
+
+#button {
+    left: 35px;
+    top: 20px;
+    width: 80px;
+    height: 30px;
+    position: absolute;
+}
+
+#questionField {
+    width: 1000;
+    height: 360;
+    background-color: rgb(230, 230, 230);
+}
+
+#slots {
+    flex-direction: column;
+}
