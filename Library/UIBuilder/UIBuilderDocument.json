@@ -13,43 +13,31 @@
         "m_CodePreviewVisible": true,
         "m_OpenUXMLFiles": [
             {
-                "m_OpenUSSFiles": [
-                    {
-                        "m_StyleSheet": {
-                            "fileID": 7433441132597879392,
-                            "guid": "cb9ab7ed375583246b6ffef0df56cc56",
-                            "type": 3
-                        },
-                        "m_BackupStyleSheet": {
-                            "instanceID": 0
-                        },
-                        "m_OldPath": "Assets/Editor/DragAndDropWindow.uss"
-                    }
-                ],
+                "m_OpenUSSFiles": [],
                 "m_VisualTreeAssetBackup": {
                     "instanceID": 0
                 },
-                "m_OpenendVisualTreeAssetOldPath": "Assets/Editor/DragAndDropWindow.uxml",
+                "m_OpenendVisualTreeAssetOldPath": "Assets/UI/test.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
-                    "guid": "90901f8fd87714b4689f334c88674754",
+                    "guid": "cbcef1becae8a4ab9abcfc8c86a5f606",
                     "type": 3
                 },
                 "m_ActiveStyleSheet": {
                     "instanceID": 0
                 },
                 "m_Settings": {
-                    "UxmlGuid": "90901f8fd87714b4689f334c88674754",
-                    "UxmlPath": "Assets/Editor/DragAndDropWindow.uxml",
+                    "UxmlGuid": "cbcef1becae8a4ab9abcfc8c86a5f606",
+                    "UxmlPath": "Assets/UI/test.uxml",
                     "CanvasX": 0,
                     "CanvasY": 0,
-                    "CanvasWidth": 370,
-                    "CanvasHeight": 626,
+                    "CanvasWidth": 350,
+                    "CanvasHeight": 450,
                     "MatchGameView": false,
                     "ZoomScale": 1.0,
                     "PanOffset": {
-                        "x": 20.857162475585939,
-                        "y": 16.090240478515626
+                        "x": 20.0,
+                        "y": 20.0
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,

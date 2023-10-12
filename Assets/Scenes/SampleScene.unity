@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -227,7 +227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 932896225}
   - component: {fileID: 932896224}
-  - component: {fileID: 932896228}
+  - component: {fileID: 932896226}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: 5e57fe209b0a0c9469b82031c6039836, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: d54b4db2fcce5124abc63641f42ada5c, type: 3}
+  sourceAsset: {fileID: 0}
   m_SortingOrder: 0
 --- !u!4 &932896225
 Transform:
@@ -266,7 +266,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &932896228
+--- !u!114 &932896226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,13 +275,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 932896223}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ede80ed707605624097be87990d07c10, type: 3}
+  m_Script: {fileID: 11500000, guid: c0963f7c9e2ee4082ae62421a641d554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIDocument: {fileID: 0}
-  redTree: {fileID: 9197481963319205126, guid: fd25ebe0f60365742a518c1e1f093c37, type: 3}
-  greeTree: {fileID: 9197481963319205126, guid: c4cb281b375bd444ca4b32766e2efddc, type: 3}
-  rankTree: {fileID: 9197481963319205126, guid: f650cbb1b282e264c9d58f269ba5a24d, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
