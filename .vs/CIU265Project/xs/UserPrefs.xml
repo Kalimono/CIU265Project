@@ -1,15 +1,20 @@
 ﻿<Properties StartupConfiguration="{304CF1B4-805E-7DC8-9CFD-4275C5630AE3}|">
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="081c5203-cda5-4c91-8ac6-174d1695e113" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CIU265Project" expanded="True">
+          <Node name="CIU265Project">
             <Node name="Assets" expanded="True">
               <Node name="Editor" expanded="True" />
               <Node name="UI" expanded="True">
-                <Node name="DragAndDropWindow.uss" selected="True" />
+                <Node name="DragAndDropManipulator.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -17,9 +22,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="823b3aaf-b2cc-4819-b39c-2687d016a5ed" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
