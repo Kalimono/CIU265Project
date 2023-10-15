@@ -9,9 +9,10 @@ public class DragDropPlaymode : MonoBehaviour
     //private void 
     
     UIDocument doc;
-    public void Start()
+    public void Rebuild()
     {
         doc = GetComponent<UIDocument>();
+        doc.rootVisualElement.Clear();
         // Each editor window contains a root VisualElement object
         //VisualElement root = rootVisualElement;
 
@@ -19,7 +20,7 @@ public class DragDropPlaymode : MonoBehaviour
         VisualElement root = doc.rootVisualElement;// AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/DropDownUXML.uxml");
         root.style.alignItems = Align.FlexEnd;
         root.style.flexDirection = FlexDirection.Row;
-        var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/DropDownUXML.uxml");
+        var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/DragDrop.uxml");
         var labelFromUXML = visualTree.Instantiate();
 
 
