@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="rootElement">
+        <!-- Label -->
+        <ui:Label name="myLabel" text="Default Text" style="font-size: 20px; margin-bottom: 10px;"></ui:Label>
+
+        <!-- TextField -->
+        <ui:TextField name="myTextField" style="width: 200px; margin-bottom: 10px;"></ui:TextField>
+
+        <!-- Button -->
+        <ui:Button name="myButton" text="Click Me"></ui:Button>
+    </ui:VisualElement>
+</ui:UXML>

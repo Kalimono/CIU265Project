@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:ScrollView />
+    <ui:ListView focusable="true" />
+    <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" name="maxTF" />
+    <ui:Slider label="Slider" value="42" high-value="100" name="maxSlider" show-input-field="false" />
+    <ui:VisualElement name="bottomPane" style="flex-grow: 1;">
+        <ui:Label tabindex="-1" text="BottomPane" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 18px; rotate: 0; transform-origin: left top; opacity: 1; background-color: rgb(178, 78, 78);" />
+        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="maxButton" style="height: 118px; width: 230px; align-self: center;" />
+    </ui:VisualElement>
+</ui:UXML>
