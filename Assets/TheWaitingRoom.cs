@@ -34,19 +34,16 @@ public enum Category
 
 public class Question {
     int phase;
-    Type type;
+    public Type type;
     Category category;
-    string prompt;
-    bool followUp;
+    public string prompt;
+    //bool followUp;
     Answer answer;
 
-    public Question(int phase, Type type, Category category, string prompt, bool followUp)
+    public Question(Type type, string prompt)
     {
-        this.phase = phase;
         this.type = type;
-        this.category = category;
         this.prompt = prompt;
-        this.followUp = followUp;
     }
 
     public void answerQuestion() {
@@ -55,14 +52,10 @@ public class Question {
 }
 
 public struct Answer {
-    string personFirst;
-    string personLast;
-    List<string> ranking;
-    List<string> choice;
+    public List<string>? ranking;
+    public List<string>? choice;
 
-    public Answer(string? first, string? last, List<string>? ranking, List<string>? choice) {
-        this.personFirst = first;
-        this.personLast = last;
+    public Answer(List<string>? ranking, List<string>? choice) {
         this.ranking = ranking;
         this.choice = choice;
     }

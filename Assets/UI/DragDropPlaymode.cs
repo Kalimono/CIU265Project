@@ -3,13 +3,12 @@ using UnityEngine;
 using Unity;
 using UnityEngine.UIElements;
 
-public class DragDropPlaymode : MonoBehaviour
+public class DragDropPlaymode : BaseQuestion
 {
 
     //private void 
-    
     UIDocument doc;
-    public void Rebuild()
+    public void Rebuild(string prompt)
     {
         doc = GetComponent<UIDocument>();
         doc.rootVisualElement.Clear();
@@ -29,7 +28,7 @@ public class DragDropPlaymode : MonoBehaviour
         //VisualElement question = new TextElement();
         TextElement question = new TextElement();
         //question.style.color = new Color(0, 0, 0);
-        question.text = "Put your names in order:\nCalmness in stressful sitiations.";
+        question.text = prompt;
         questionField.Add(question);
         question.transform.position = new Vector2(15.0f, 50.0f);
 
@@ -55,8 +54,8 @@ public class DragDropPlaymode : MonoBehaviour
             ob.transform.position = new Vector2(ob.transform.position.x, ob.transform.position.y + (55.0f * i));
             //ob.transform.scale = new Vector3(1, 1.3f - (i * 0.1f), 1);
             DragAndDropManipulator manip3 = new(ob);
-
         }
 
+        
     }
 }

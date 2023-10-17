@@ -4,31 +4,42 @@ using UnityEngine;
 
 public class Session : MonoBehaviour
 {
+
+
+    List<string> participants;
+    List<Question> rankQuestions;
+    List<List<string>> rankings;
+    List<Question> followUps;
+    
+     
     NameEntry name;
     DragDropPlaymode rank;
     public bool buildNameEntry;
     public bool buildRanking;
+
+    int qInd;
     // Start is called before the first frame update
     void Start()
     {
+        qInd = 0;
         name = GetComponent<NameEntry>();
         rank = GetComponent<DragDropPlaymode>();
-        //dd.Build();
+        rankQuestions = new List<Question>();
+        rankQuestions.Add(new Question(type: Type.rank, "test prompt"));
+
+        name = GetComponent<NameEntry>();
+        rank = GetComponent<DragDropPlaymode>();
+        rank.Rebuild("a");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (buildRanking)
+        if (rank.finished)
         {
-            buildRanking = false;
-            rank.Rebuild();
-        }
-
-        if (buildNameEntry)
-        {
-            buildNameEntry = false;
-            name.Rebuild();
+            rank.GetAnswer();
+            qInd++;
+            rank.Rebuild(rankQuestions[qInd].prompt);
         }
     }
 }
