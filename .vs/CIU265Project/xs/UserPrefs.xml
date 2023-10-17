@@ -1,25 +1,26 @@
 ﻿<Properties StartupConfiguration="{304CF1B4-805E-7DC8-9CFD-4275C5630AE3}|">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a75e8672-8d86-47e5-8f41-cbaeae160980" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CIU265Project" expanded="True">
+          <Node name="CIU265Project">
             <Node name="Assets" expanded="True">
               <Node name="Editor" expanded="True" />
               <Node name="NameEntry" expanded="True" />
-              <Node name="UI" expanded="True" />
-              <Node name="QandA.cs" selected="True" />
+              <Node name="UI" expanded="True">
+                <Node name="RankQuestion.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="56a34c2d-92ca-4594-8879-d162bea8fabe" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

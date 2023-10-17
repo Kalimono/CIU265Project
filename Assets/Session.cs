@@ -65,6 +65,14 @@ public class Session : MonoBehaviour
         if (currentQuestion.finished)
         {
             answers.Add(currentQuestion.GetAnswer());
+            if (currentQuestion.GetAnswer().ranking != null)
+            {
+                foreach (string name in currentQuestion.GetAnswer().ranking)
+                {
+                    Debug.Log(name);
+                }
+
+            }
             switch (rankQuestion[qInd].type)
             {
                 case Type.input:
@@ -73,11 +81,9 @@ public class Session : MonoBehaviour
                     break;
 
                 case Type.rank:
-                    Debug.Log("Yes");
                     currentQuestion = GetComponent<RankQuestion>();
                     Debug.Log(currentQuestion);
                     currentQuestion.Rebuild(rankQuestion[qInd].prompt, participants);
-                    //currentQuestion.finished = false;
                     break;
 
                 case Type.multi:

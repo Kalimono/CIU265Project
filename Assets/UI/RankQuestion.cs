@@ -1,6 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 using Unity;
+using System.Linq;
 using UnityEngine.UIElements;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,15 +14,17 @@ public class RankQuestion : BaseQuestion
 
     public override void FinishQuestion(ClickEvent evt)
     {
-        foreach (VisualElement ob in draggables)
-        {
-            if (ob.transform.position.x < 10)
-            {
-                return;
-            }
-        }
         this.finished = true;
     }
+
+    public override Answer GetAnswer()
+    {
+        List<VisualElement> SortedList = draggables.OrderBy(o => o.transform.position.y).ToList();
+        List<string> rankedNameList = SortedList.Select(o => o.Q<TextElement>().text).ToList();
+        return new Answer(ranking: rankedNameList, choice: null);
+    }
+
+    
 
     public override void Rebuild(string prompt, List<string> names)
     {
