@@ -60,9 +60,7 @@ public struct Answer {
     List<string> ranking;
     List<string> choice;
 
-    public Answer(string? first, string? last, List<string>? ranking, List<string>? choice) {
-        this.personFirst = first;
-        this.personLast = last;
+    public Answer(List<string>? ranking, List<string>? choice) {
         this.ranking = ranking;
         this.choice = choice;
     }
