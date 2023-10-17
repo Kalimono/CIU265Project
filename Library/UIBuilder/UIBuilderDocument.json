@@ -23,24 +23,26 @@
                         "m_BackupStyleSheet": {
                             "instanceID": 0
                         },
-                        "m_OldPath": "Assets/UI/DragAndDropWindow.uss"
+                        "m_OldPath": "Assets/UI/Ranking/DragAndDropWindow.uss"
                     }
                 ],
                 "m_VisualTreeAssetBackup": {
                     "instanceID": 0
                 },
-                "m_OpenendVisualTreeAssetOldPath": "Assets/UI/DragDrop.uxml",
+                "m_OpenendVisualTreeAssetOldPath": "Assets/UI/SingleOut/SingleOut.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
-                    "guid": "cbcef1becae8a4ab9abcfc8c86a5f606",
+                    "guid": "a870a2a356fc44899bf0269c4f46b373",
                     "type": 3
                 },
                 "m_ActiveStyleSheet": {
-                    "instanceID": 0
+                    "fileID": 7433441132597879392,
+                    "guid": "271ed4616d16f44b4b5af006669894d7",
+                    "type": 3
                 },
                 "m_Settings": {
-                    "UxmlGuid": "cbcef1becae8a4ab9abcfc8c86a5f606",
-                    "UxmlPath": "Assets/UI/DropDownUXML.uxml",
+                    "UxmlGuid": "a870a2a356fc44899bf0269c4f46b373",
+                    "UxmlPath": "Assets/UI/SingleOut/SingleOut.uxml",
                     "CanvasX": 0,
                     "CanvasY": 0,
                     "CanvasWidth": 350,
@@ -48,8 +50,8 @@
                     "MatchGameView": false,
                     "ZoomScale": 1.0,
                     "PanOffset": {
-                        "x": 353.4361572265625,
-                        "y": 73.21601867675781
+                        "x": 20.0,
+                        "y": 20.0
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,

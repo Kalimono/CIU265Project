@@ -1,26 +1,34 @@
 ﻿<Properties StartupConfiguration="{304CF1B4-805E-7DC8-9CFD-4275C5630AE3}|">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a75e8672-8d86-47e5-8f41-cbaeae160980" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d0fd2832-84b8-47d0-ae98-24325e5c7002" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CIU265Project">
+          <Node name="CIU265Project" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Editor" expanded="True" />
-              <Node name="NameEntry" expanded="True" />
+              <Node name="Scripts" expanded="True" />
               <Node name="UI" expanded="True">
-                <Node name="RankQuestion.cs" selected="True" />
+                <Node name="NameEntry" expanded="True">
+                  <Node name="NameEntry.cs" selected="True" />
+                </Node>
+                <Node name="Ranking" expanded="True" />
+                <Node name="SingleOut" expanded="True" />
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Unity" selected="True" />
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>

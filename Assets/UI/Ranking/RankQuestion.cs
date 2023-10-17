@@ -14,6 +14,11 @@ public class RankQuestion : BaseQuestion
 
     public override void FinishQuestion(ClickEvent evt)
     {
+        foreach (var ob in draggables)
+        {
+            if (ob.transform.position.x < 10)
+                return;
+        }
         this.finished = true;
     }
 
@@ -24,7 +29,6 @@ public class RankQuestion : BaseQuestion
         return new Answer(ranking: rankedNameList, choice: null);
     }
 
-    
 
     public override void Rebuild(string prompt, List<string> names)
     {
@@ -39,16 +43,19 @@ public class RankQuestion : BaseQuestion
         var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/Ranking/DragDrop.uxml");
         var labelFromUXML = visualTree.Instantiate();
 
-
         VisualElement questionField = labelFromUXML.Q("questionField");
+
+        Button finishButton = new Button();
+        finishButton.RegisterCallback<ClickEvent>(FinishQuestion);
+        questionField.Add(finishButton);
+        finishButton.transform.position = new Vector2(15.0f, 200.0f);
+
         TextElement question = new TextElement();
         question.text = prompt;
         questionField.Add(question);
         question.transform.position = new Vector2(15.0f, 50.0f);
 
-        Button finishButton = new Button();
-        finishButton.RegisterCallback<ClickEvent>(FinishQuestion);
-        questionField.Add(finishButton);
+        
 
         root.Add(labelFromUXML);
 

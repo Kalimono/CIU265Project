@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/DragAndDropWindow.uss?fileID=7433441132597879392&amp;guid=271ed4616d16f44b4b5af006669894d7&amp;type=3#DragAndDropWindow" />
+    <Style src="project://database/Assets/UI/Ranking/DragAndDropWindow.uss?fileID=7433441132597879392&amp;guid=271ed4616d16f44b4b5af006669894d7&amp;type=3#DragAndDropWindow" />
     <ui:VisualElement name="root" style="flex-grow: 1; flex-direction: row; justify-content: center; width: auto; background-color: rgb(255, 255, 255); height: auto;">
         <ui:VisualElement name="slots" style="flex-direction: row;">
             <ui:VisualElement name="slot_row2" class="slot_row">
@@ -10,7 +10,7 @@
                 <ui:VisualElement name="slot5" class="slot" />
                 <ui:VisualElement name="slot6" class="slot" />
             </ui:VisualElement>
-            <ui:VisualElement name="questionField" style="flex-grow: 1; background-color: rgb(183, 183, 183); width: 300px; height: 365px; align-items: center;" />
+            <ui:VisualElement name="questionField" style="flex-grow: 1; background-color: rgb(183, 183, 183); width: 300px; height: 365px; align-items: center; flex-direction: column;" />
             <ui:VisualElement style="flex-grow: 1; width: 20px; background-color: rgb(0, 0, 0);" />
             <ui:VisualElement name="slot_row1" class="slot_row">
                 <ui:VisualElement name="slot1" class="slot">

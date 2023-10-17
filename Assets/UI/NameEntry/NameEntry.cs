@@ -6,12 +6,11 @@ using UnityEngine.UIElements;
 
 public class NameEntry : BaseQuestion
 {
-
-    //private void 
-    
     UIDocument doc;
     string txt;
     VisualElement qf;
+
+    List<string> participants;
 
     public override void FinishQuestion(ClickEvent evt)
     {
@@ -53,6 +52,11 @@ public class NameEntry : BaseQuestion
         // The style will be applied to the VisualElement and all of its children.
         var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/UI/DragAndDropWindow.uss");        
 
+    }
+
+    public override Answer GetAnswer()
+    {
+        return base.GetAnswer();
     }
 
 

@@ -360,6 +360,7 @@
 "Assets/UI/NameEntry/NameEntry.cs"
 "Assets/UI/Ranking/DragAndDropManipulator.cs"
 "Assets/UI/Ranking/RankQuestion.cs"
+"Assets/UI/SingleOut/SingleOut.cs"
 -langversion:9.0
 
 /deterministic

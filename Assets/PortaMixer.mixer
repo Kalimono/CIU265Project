@@ -16,6 +16,7 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: 3726267985361978568}
   - {fileID: 4184436575722944051}
+  - {fileID: 1206277875262099438}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -31,6 +32,7 @@ AudioMixerController:
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
+  - {fileID: 2349266698815575186}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -90,6 +92,7 @@ AudioMixerSnapshotController:
   m_SnapshotID: 4c65aa946e78a432bb90abfe9634e710
   m_FloatValues:
     c44146398324844c88a9256cd68edb58: 0.2
+    e710284ae9d4f41278c1b59aba4c30af: 134.2
   m_TransitionOverrides: {}
 --- !u!244 &1008710750385172234
 AudioMixerEffectController:
@@ -107,6 +110,24 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &1206277875262099438
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: d1461c083ea2c44e28c4e783c7010180
+  m_EffectName: Highpass
+  m_MixLevel: e367360a9ef6e4b57b15d5504bca3670
+  m_Parameters:
+  - m_ParameterName: Cutoff freq
+    m_GUID: e710284ae9d4f41278c1b59aba4c30af
+  - m_ParameterName: Resonance
+    m_GUID: 323162d0af3bc4ddfa86d326fa3f75ac
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &2343418560162031776
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -121,6 +142,19 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!245 &2349266698815575186
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: distorted
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 2d7cc320665a04165b1cf3152b1cbc80
+  m_FloatValues:
+    c44146398324844c88a9256cd68edb58: 0.624
+    e710284ae9d4f41278c1b59aba4c30af: 134.2
+  m_TransitionOverrides: {}
 --- !u!244 &3726267985361978568
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
