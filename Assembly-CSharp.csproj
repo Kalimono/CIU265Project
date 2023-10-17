@@ -59,9 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/BaseQuestion.cs" />
+    <Compile Include="Assets/UI/RankQuestion.cs" />
     <Compile Include="Assets/Session.cs" />
     <Compile Include="Assets/Scripts/ArduinoCommunications.cs" />
-    <Compile Include="Assets/UI/DragDropPlaymode.cs" />
     <Compile Include="Assets/NameEntry/NameEntry.cs" />
     <Compile Include="Assets/QandA.cs" />
     <Compile Include="Assets/UI/DragAndDropManipulator.cs" />

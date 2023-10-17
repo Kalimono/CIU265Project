@@ -10,12 +10,12 @@ public enum Type
     input
 }
 
-public enum Category
-{
-    ethical,
-    physical,
-    intellectual
-}
+//public enum Category
+//{
+//    ethical,
+//    physical,
+//    intellectual
+//}
 
 public class Question {
     public Type type;

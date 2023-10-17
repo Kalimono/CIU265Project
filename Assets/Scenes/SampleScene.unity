@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 932896224}
   - component: {fileID: 932896227}
   - component: {fileID: 932896228}
-  - component: {fileID: 932896226}
+  - component: {fileID: 932896230}
   - component: {fileID: 932896229}
   m_Layer: 5
   m_Name: UIDocument
@@ -269,18 +269,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &932896226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932896223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0963f7c9e2ee4082ae62421a641d554, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &932896227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,6 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9442c2d12f488492ea1752b530615796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finished: 0
 --- !u!82 &932896229
 AudioSource:
   m_ObjectHideFlags: 0
@@ -403,6 +392,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &932896230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932896223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0963f7c9e2ee4082ae62421a641d554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finished: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

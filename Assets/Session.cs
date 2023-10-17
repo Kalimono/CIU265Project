@@ -14,7 +14,7 @@ public class Session : MonoBehaviour
     
      
     NameEntry name;
-    DragDropPlaymode rank;
+    BaseQuestion currentQuestion;
     public bool buildNameEntry;
     public bool buildRanking;
 
@@ -22,25 +22,59 @@ public class Session : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        qInd = 0;
-        name = GetComponent<NameEntry>();
-        rank = GetComponent<DragDropPlaymode>();
-        rankQuestions = new List<Question>();
-        rankQuestions.Add(new Question(type: Type.rank, "test prompt"));
+        participants = new List<string>();
+        participants.Add("Heinrich");
+        participants.Add("Job");
+        participants.Add("Greger");
+        participants.Add("Majken");
+        participants.Add("Hjulia");
 
-        name = GetComponent<NameEntry>();
-        rank = GetComponent<DragDropPlaymode>();
-        rank.Rebuild("a");
+        //name = GetComponent<NameEntry>();
+        rankQuestions = new List<Question>();
+        //rankQuestions.Add(new Question(type: Type.input, "test prompt1"));
+        rankQuestions.Add(new Question(type: Type.rank, "test prompt1"));
+        rankQuestions.Add(new Question(type: Type.rank, "test prompt2"));
+        rankQuestions.Add(new Question(type: Type.rank, "test prompt3"));
+
+        ////name = GetComponent<NameEntry>();
+        //currentQuestion = GetComponent<NameEntry>();
+        //currentQuestion.Rebuild("a", participants);
+        currentQuestion = GetComponent<NameEntry>();
+        currentQuestion.Rebuild("enter names", participants);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (rank.finished)
-        {
-            answers.Add(rank.GetAnswer());
+        if (currentQuestion.finished)
+        {   
+            switch (rankQuestions[qInd].type)
+            {
+                case Type.input:
+                    currentQuestion = GetComponent<NameEntry>();
+                    currentQuestion.Rebuild("enter your names", participants);
+                    break;
+
+                case Type.rank:
+                    Debug.Log("Yes");
+                    currentQuestion = GetComponent<RankQuestion>();
+                    Debug.Log(currentQuestion);
+                    currentQuestion.Rebuild(rankQuestions[qInd].prompt, participants);
+                    //currentQuestion.finished = false;
+                    break;
+
+                case Type.multi:
+
+                    break;
+
+                case Type.single:
+
+                    break;
+
+            };
             qInd++;
-            rank.Rebuild(rankQuestions[qInd].prompt);
+
+
         }
     }
 }
