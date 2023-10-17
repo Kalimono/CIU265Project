@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/QuestionPhase/QuestionPhase.uss?fileID=7433441132597879392&amp;guid=5b2072d4f82da3e4bbbe7beec052e6fc&amp;type=3#QuestionPhase" />
+    <ui:Label tabindex="-1" text="QuestionField" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuestionField" />
+    <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" name="AnswerField" />
+    <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NextQuestionButton" />
+</ui:UXML>
