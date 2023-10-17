@@ -4,17 +4,7 @@ using UnityEngine;
 
 public class TheWaitingRoom : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
 
 public enum Type
@@ -33,21 +23,13 @@ public enum Category
 }
 
 public class Question {
-    int phase;
     public Type type;
-    Category category;
     public string prompt;
-    //bool followUp;
-    Answer answer;
 
     public Question(Type type, string prompt)
     {
         this.type = type;
         this.prompt = prompt;
-    }
-
-    public void answerQuestion() {
-        this.answer = new Answer();
     }
 }
 

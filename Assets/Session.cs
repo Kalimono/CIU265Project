@@ -10,6 +10,7 @@ public class Session : MonoBehaviour
     List<Question> rankQuestions;
     List<List<string>> rankings;
     List<Question> followUps;
+    List<Answer> answers;
     
      
     NameEntry name;
@@ -37,7 +38,7 @@ public class Session : MonoBehaviour
     {
         if (rank.finished)
         {
-            rank.GetAnswer();
+            answers.Add(rank.GetAnswer());
             qInd++;
             rank.Rebuild(rankQuestions[qInd].prompt);
         }
