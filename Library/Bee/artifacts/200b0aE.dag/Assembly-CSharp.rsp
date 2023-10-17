@@ -355,9 +355,9 @@
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/BaseQuestion.cs"
 "Assets/NameEntry/NameEntry.cs"
+"Assets/QandA.cs"
 "Assets/Scripts/ArduinoCommunications.cs"
 "Assets/Session.cs"
-"Assets/TheWaitingRoom.cs"
 "Assets/UI/DragAndDropManipulator.cs"
 "Assets/UI/DragDropPlaymode.cs"
 -langversion:9.0
