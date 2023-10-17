@@ -9,6 +9,8 @@ public class NameEntry : MonoBehaviour
     //private void 
     
     UIDocument doc;
+    string txt;
+    VisualElement qf;
     public void Rebuild()
     {
         doc = GetComponent<UIDocument>();
@@ -20,16 +22,23 @@ public class NameEntry : MonoBehaviour
         VisualElement root = doc.rootVisualElement;// AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/DropDownUXML.uxml");
         root.style.alignItems = Align.FlexEnd;
         root.style.flexDirection = FlexDirection.Row;
+
+
         var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/NameEntry/NameEntry.uxml");
         var labelFromUXML = visualTree.Instantiate();
 
 
         VisualElement questionField = labelFromUXML.Q("questionField");
+        qf = questionField;
         TextElement question = new TextElement();
         question.text = "Please enter your names";
         questionField.Add(question);
         question.transform.position = new Vector2(15.0f, 50.0f);
 
+        txt = question.text;
+
+        Button myBtn = labelFromUXML.Q<Button>("enterName");
+        myBtn.RegisterCallback<ClickEvent>(GetNameAndWrite);
 
         root.Add(labelFromUXML);
 
@@ -40,6 +49,15 @@ public class NameEntry : MonoBehaviour
         //DragAndDropManipulator manipulator =
         //new(root.Q<VisualElement>("object"));
         
+
+    }
+
+
+    private void GetNameAndWrite(ClickEvent evt)
+    {
+        TextElement someText = new TextElement();
+        someText.text = txt;
+        qf.Add(someText);
 
     }
 }

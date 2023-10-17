@@ -1,18 +1,19 @@
 ﻿<Properties StartupConfiguration="{304CF1B4-805E-7DC8-9CFD-4275C5630AE3}|">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0d885248-7c5e-4a46-9a0a-813df4e4ed87" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CIU265Project" expanded="True">
+          <Node name="CIU265Project">
             <Node name="Assets" expanded="True">
               <Node name="Editor" expanded="True" />
-              <Node name="NameEntry" expanded="True">
-                <Node name="NameEntry.uss" selected="True" />
-              </Node>
+              <Node name="NameEntry" expanded="True" />
               <Node name="UI" expanded="True" />
             </Node>
           </Node>
@@ -20,7 +21,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="388b8ecd-6d7f-4161-9cff-603c27e6d21c" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
 </Properties>
