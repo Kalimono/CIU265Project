@@ -14,11 +14,13 @@ public class NameEntry : BaseQuestion
 
     public override void FinishQuestion(ClickEvent evt)
     {
-        throw new System.NotImplementedException();
+        Debug.Log("FINISH");
+        finished = true;
     }
 
-    public override void Rebuild(string prompt, List<string> names)
+    public override void Rebuild(string prompt, List<string> names, bool? first)
     {
+        Debug.Log("Built");
         doc = GetComponent<UIDocument>();
         doc.rootVisualElement.Clear();
         // Each editor window contains a root VisualElement object
@@ -44,7 +46,7 @@ public class NameEntry : BaseQuestion
         txt = question.text;
 
         Button myBtn = labelFromUXML.Q<Button>("enterName");
-        myBtn.RegisterCallback<ClickEvent>(GetNameAndWrite);
+        myBtn.RegisterCallback<ClickEvent>(FinishQuestion);
 
         root.Add(labelFromUXML);
 
@@ -56,12 +58,7 @@ public class NameEntry : BaseQuestion
 
     public override Answer GetAnswer()
     {
-        return base.GetAnswer();
+        return new Answer(new List<string>() { "henrik", "john", "pernila" }, null);
     }
 
-
-    private void GetNameAndWrite(ClickEvent evt)
-    {
-        this.finished = true;
-    }
 }

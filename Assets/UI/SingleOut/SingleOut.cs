@@ -14,12 +14,7 @@ public class SingleOut : BaseQuestion
 
     public override void FinishQuestion(ClickEvent evt)
     {
-        foreach (var ob in draggables)
-        {
-            if (ob.transform.position.x < 10)
-                return;
-        }
-        this.finished = true;
+        finished = true;
     }
 
     public override Answer GetAnswer()
@@ -30,9 +25,9 @@ public class SingleOut : BaseQuestion
     }
 
 
-    public override void Rebuild(string prompt, List<string> names)
+    public override void Rebuild(string prompt, List<string> names, bool? first)
     {
-        base.Rebuild(prompt, names);
+        base.Rebuild(prompt, names, null);
         doc = GetComponent<UIDocument>();
         doc.rootVisualElement.Clear();
 
@@ -53,7 +48,7 @@ public class SingleOut : BaseQuestion
         TextElement question = new TextElement();
         question.text = prompt;
         questionField.Add(question);
-        question.transform.position = new Vector2(15.0f, 50.0f);
+        question.transform.position = new Vector2(15.0f, 0.0f);
 
         
 

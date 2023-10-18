@@ -17,7 +17,7 @@ public abstract class BaseQuestion : MonoBehaviour
     public abstract void FinishQuestion(ClickEvent evt);
 
 
-    public virtual void Rebuild(string prompt, List<string> names)
+    public virtual void Rebuild(string prompt, List<string> names, bool? first)
     {
         finished = false;
     }

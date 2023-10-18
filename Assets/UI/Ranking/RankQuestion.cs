@@ -30,9 +30,9 @@ public class RankQuestion : BaseQuestion
     }
 
 
-    public override void Rebuild(string prompt, List<string> names)
+    public override void Rebuild(string prompt, List<string> names, bool? _)
     {
-        base.Rebuild(prompt, names);
+        base.Rebuild(prompt, names, _);
         doc = GetComponent<UIDocument>();
         doc.rootVisualElement.Clear();
 

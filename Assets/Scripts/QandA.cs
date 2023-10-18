@@ -4,10 +4,11 @@ using UnityEngine;
 
 public enum Type
 {
+    names,
     rank,
     multi,
     single,
-    input
+    input,
 }
 
 //public enum Category
@@ -29,11 +30,11 @@ public class Question {
 }
 
 public struct Answer {
-    public List<string>? ranking;
+    public List<string>? orderedNames;
     public List<string>? choice;
 
     public Answer(List<string>? ranking, List<string>? choice) {
-        this.ranking = ranking;
+        this.orderedNames = ranking;
         this.choice = choice;
     }
 }
