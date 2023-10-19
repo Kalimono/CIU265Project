@@ -61,6 +61,7 @@
     <Compile Include="Assets/UI/Ranking/RankQuestion.cs" />
     <Compile Include="Assets/UI/Startup/Startup.cs" />
     <Compile Include="Assets/UI/NameEntry/NameEntry.cs" />
+    <Compile Include="Assets/Scripts/ArduinoEvents.cs" />
     <Compile Include="Assets/Scripts/ArduinoCommunications.cs" />
     <Compile Include="Assets/Scripts/QandA.cs" />
     <Compile Include="Assets/Scripts/Session.cs" />

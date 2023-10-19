@@ -70,14 +70,13 @@ public class NameEntry : BaseQuestion
 
     public override void FinishQuestion(ClickEvent evt)
     {   
-        if (participants.Count >= 5) {
+        if (participants.Count >= 3) {
             finished = true;
         }
     }
 
     public override Answer GetAnswer()
     {
-        Debug.Log(participants[0]);
         return new Answer(participants, null);
     }
 

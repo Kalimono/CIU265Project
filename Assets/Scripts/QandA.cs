@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Type
+public enum Qtype
 {
     names,
     rank,
     multi,
     single,
     input,
+    unspec
 }
 
 //public enum Category
@@ -18,13 +19,10 @@ public enum Type
 //    intellectual
 //}
 
-public interface ArduinoEvent
-{
-    public void PerformEvent();
-}
+
 
 public class Question {
-    public Type type;
+    public Qtype type;
     public string prompt;
     public List<string>? orderedNames;
     public Question? followUp;
@@ -36,7 +34,7 @@ public class Question {
     public bool instantFollowUp;
 
 
-    public Question(Type type, string prompt)
+    public Question(Qtype type, string prompt)
     {
         this.type = type;
         this.prompt = prompt;

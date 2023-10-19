@@ -354,6 +354,7 @@
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/ArduinoCommunications.cs"
+"Assets/Scripts/ArduinoEvents.cs"
 "Assets/Scripts/QandA.cs"
 "Assets/Scripts/Session.cs"
 "Assets/UI/BaseQuestion.cs"
