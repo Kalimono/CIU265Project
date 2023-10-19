@@ -18,15 +18,57 @@ public enum Type
 //    intellectual
 //}
 
+public interface ArduinoEvent
+{
+    public void PerformEvent();
+}
+
 public class Question {
     public Type type;
     public string prompt;
+    public List<string>? orderedNames;
+    public Question? followUp;
+    public ArduinoEvent? arduinoEvt;
+
+    public bool HasNames { get => (orderedNames != null); }
+    public bool HasFollowUp { get => (followUp != null); }
+    public bool HasArduinoEvent { get => (arduinoEvt != null); }
+    public bool instantFollowUp;
+
 
     public Question(Type type, string prompt)
     {
         this.type = type;
         this.prompt = prompt;
     }
+
+    public Question withParticipants(List<string> names)
+    {
+        orderedNames = names;
+        return this;
+    }
+
+    public Question withFollowUp(Question q, bool instant)
+    {
+        followUp = q;
+        instantFollowUp = instant;
+        return this;
+    }
+
+    public Question withArduinoEvt(ArduinoEvent evt)
+    {
+        arduinoEvt = evt;
+        return this;
+    }
+
+    public void performEvent(string arg)
+    {
+        if (arduinoEvt != null)
+        {
+            arduinoEvt.PerformEvent();
+        }
+    }
+
 }
 
 public struct Answer {

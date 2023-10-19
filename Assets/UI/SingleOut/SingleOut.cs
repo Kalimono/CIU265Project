@@ -26,9 +26,9 @@ public class SingleOut : BaseQuestion
     }
 
 
-    public override void Rebuild(string prompt, List<string> names, bool? first)
+    public override void Rebuild(Question myQ)
     {
-        base.Rebuild(prompt, names, null);
+        base.Rebuild(myQ);
         doc = GetComponent<UIDocument>();
         doc.rootVisualElement.Clear();
 
@@ -47,7 +47,7 @@ public class SingleOut : BaseQuestion
         finishButton.transform.position = new Vector2(15.0f, 100.0f);
 
         TextElement question = new TextElement();
-        question.text = ReplacePlaceholders(prompt, names);
+        question.text = ReplacePlaceholders(myQ.prompt, myQ.orderedNames);
         questionField.Add(question);
         question.transform.position = new Vector2(15.0f, 0.0f);
 

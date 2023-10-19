@@ -13,9 +13,9 @@ public class NameEntry : BaseQuestion
 
     List<string> participants;
 
-    public override void Rebuild(string prompt, List<string> names, bool? first)
+    public override void Rebuild(Question myQ)
     {
-        Debug.Log("REBUILT");
+        base.Rebuild(myQ);
         participants = new List<string>();
         doc = GetComponent<UIDocument>();
         doc.rootVisualElement.Clear();
@@ -36,7 +36,7 @@ public class NameEntry : BaseQuestion
         textField = labelFromUXML.Q<TextField>();
         qf = questionField;
         TextElement question = new TextElement();
-        question.text = prompt;
+        question.text = myQ.prompt;
         questionField.Add(question);
         question.transform.position = new Vector2(15.0f, -200.0f);
 

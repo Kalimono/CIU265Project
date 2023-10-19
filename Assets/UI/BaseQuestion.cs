@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public abstract class BaseQuestion : MonoBehaviour
 {
+    public Question MyQ;
     public bool finished;
     List<string>? ranking;
     List<string>? choice;
@@ -17,8 +18,9 @@ public abstract class BaseQuestion : MonoBehaviour
     public abstract void FinishQuestion(ClickEvent evt);
 
 
-    public virtual void Rebuild(string prompt, List<string> names, bool? first)
+    public virtual void Rebuild(Question myQ)
     {
+        MyQ = myQ;
         finished = false;
     }
 

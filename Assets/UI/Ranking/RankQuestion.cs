@@ -30,9 +30,9 @@ public class RankQuestion : BaseQuestion
     }
 
 
-    public override void Rebuild(string prompt, List<string> names, bool? _)
+    public override void Rebuild(Question myQ)
     {
-        base.Rebuild(prompt, names, _);
+        base.Rebuild(myQ);
         doc = GetComponent<UIDocument>();
         doc.rootVisualElement.Clear();
 
@@ -51,7 +51,7 @@ public class RankQuestion : BaseQuestion
         finishButton.transform.position = new Vector2(15.0f, 200.0f);
 
         TextElement question = new TextElement();
-        question.text = prompt;
+        question.text = myQ.prompt;
         questionField.Add(question);
         question.transform.position = new Vector2(15.0f, 50.0f);
 
@@ -63,11 +63,11 @@ public class RankQuestion : BaseQuestion
 
 
         draggables = new List<VisualElement>();
-        for (int i = 0; i < names.Count; i++)
+        for (int i = 0; i < myQ.orderedNames.Count; i++)
         {
             var txt = new TextElement();
             txt.style.color = new Color(0, 0, 0);
-            txt.text = names[i];
+            txt.text = myQ.orderedNames[i];
             var ob = new VisualElement();
             ob.Add(txt);
             ob.AddToClassList("object");
