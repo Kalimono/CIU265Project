@@ -1,19 +1,22 @@
 ﻿<Properties StartupConfiguration="{304CF1B4-805E-7DC8-9CFD-4275C5630AE3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Session.cs">
-    <Files>
-      <File FileName="Assets/Scripts/Session.cs" Line="62" Column="1" />
-      <File FileName="Assets/UI/Startup/Startup.cs" Line="17" Column="25" />
-    </Files>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b03f7d86-78c4-4d0f-9ad0-233d09c50b9c" />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CIU265Project" expanded="True">
+          <Node name="CIU265Project">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True" />
               <Node name="UI" expanded="True">
                 <Node name="NameEntry" expanded="True" />
                 <Node name="Ranking" expanded="True" />
-                <Node name="SingleOut" expanded="True" />
+                <Node name="SingleOut" expanded="True">
+                  <Node name="SingleOut.cs" selected="True" />
+                </Node>
                 <Node name="Startup" expanded="True" />
               </Node>
             </Node>
@@ -22,11 +25,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f001474e-ed29-4830-aac9-d2aee17311b7" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

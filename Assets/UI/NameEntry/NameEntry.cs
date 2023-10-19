@@ -20,7 +20,6 @@ public class NameEntry : BaseQuestion
 
     public override void Rebuild(string prompt, List<string> names, bool? first)
     {
-        Debug.Log("Built");
         doc = GetComponent<UIDocument>();
         doc.rootVisualElement.Clear();
         // Each editor window contains a root VisualElement object

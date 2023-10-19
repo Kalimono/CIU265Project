@@ -13,7 +13,6 @@ public class Startup : BaseQuestion
 
     public override void FinishQuestion(ClickEvent evt)
     {
-        Debug.Log("YES");
         finished = true;
     }
 
