@@ -6,7 +6,6 @@ using UnityEngine.Audio;
 
 public class Session : MonoBehaviour
 {
-    // håller koll på vilken följdfråga som står på tur
     AudioSource a;
     AudioMixerGroup amg;
     List<string> participants;
@@ -15,6 +14,7 @@ public class Session : MonoBehaviour
     BaseQuestion currentQuestion;
     int qInd;
     Type answeredType;
+    bool namesDone;
 
     // Start is called before the first frame update
     void Start()
@@ -35,11 +35,11 @@ public class Session : MonoBehaviour
         allQuestions.Add(new Question(Type.rank, "Which person in the group is most likely to pick up a hitchhiker?"));
         allQuestions.Add(new Question(Type.rank, "Who is the most law-abiding?"));
 
-        allQuestions.Add(new Question(Type.single, "Has person played basketball?"));
-        allQuestions.Add(new Question(Type.single, "person Do you try to save worms that are crossing the street?"));
-        allQuestions.Add(new Question(Type.single, "Person A, in light of your top-ranking status with regard to hygiene, we would greatly appreciate your insights on ways in which the lowest-ranked participant, person B, could enhance their hygiene practices."));
-        allQuestions.Add(new Question(Type.single, "person, do you like movies about gladiators?"));
-        allQuestions.Add(new Question(Type.single, "Has person ever broken the law?"));
+        allQuestions.Add(new Question(Type.single, "Has !PFIRST played basketball?"));
+        allQuestions.Add(new Question(Type.single, "!PFIRST, Do you try to save worms that are crossing the street?"));
+        allQuestions.Add(new Question(Type.single, "!PFIRST, in light of your top-ranking status with regard to hygiene, we would greatly appreciate your insights on ways in which the lowest-ranked participant, !PLAST, could enhance their hygiene practices."));
+        allQuestions.Add(new Question(Type.single, "!PFIRST, do you like movies about gladiators?"));
+        allQuestions.Add(new Question(Type.single, "Has !PLAST ever broken the law?"));
 
 
         //rankQuestion.Add(new Question(Type.rank, "Who is the best juggler?"));
@@ -53,22 +53,40 @@ public class Session : MonoBehaviour
         allQuestions.Add(new Question(Type.rank, "Who would enjoy being a mole for a day?"));
         allQuestions.Add(new Question(Type.rank, "Is there anyone in the group that does not believe computers are conscious?"));
 
-        allQuestions.Add(new Question(Type.single, "Why do you like it?"));
+        allQuestions.Add(new Question(Type.single, "!PFIRST, Why do you like it?"));
         allQuestions.Add(new Question(Type.single, "Did you mean the animal or?"));
         allQuestions.Add(new Question(Type.single, "Do you believe i pass the turing test?"));
 
+        currentQuestion = GetComponent<Startup>();
+        currentQuestion.Rebuild("Welcome!", participants, null);
+        qInd = -1;
+        namesDone = false;
+
+    }
+
+    private bool StartupSession()
+    {
+        return currentQuestion.finished;
+    }
+
+    private bool EnterNames()
+    {
         currentQuestion = GetComponent<NameEntry>();
         currentQuestion.Rebuild("please enter your names", null, null);
         answeredType = Type.names;
 
-        qInd = -1;
-
-
+        
+        return currentQuestion.finished;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        bool start = StartupSession();
+
+        if (start && !namesDone)
+            namesDone = EnterNames();
 
         // Skriva in namn
         // returvärdet går in i en lista kallad participants,
@@ -78,7 +96,7 @@ public class Session : MonoBehaviour
         // från GetAnswer(). Dessutom ska NameEntry.FinishQuestion vara villkorad på om OK antal namn fyllts i.
         
 
-        if (currentQuestion.finished)
+        if (currentQuestion.finished && namesDone)
         {
             // redo för nästa fråga
             qInd++;
@@ -88,12 +106,14 @@ public class Session : MonoBehaviour
             // och då ska svaret returneras direkt till participants.
             switch (answeredType)
             {
+
                 case Type.names:
                     participants = currentQuestion.GetAnswer().orderedNames;
                     break;
 
                 case Type.rank:
                     rankAnswers.Add(currentQuestion.GetAnswer());
+                    Debug.Log(rankAnswers.Count);
                     break;
 
                 case Type.input:
@@ -111,7 +131,6 @@ public class Session : MonoBehaviour
 
             // 2a switchen kollar vad för fråga som ställs härnäst och berättar för loopen vad för fråga den jobbar med
             // och bygger upp UI:t för frågan.
-
             switch (allQuestions[qInd].type)
             {
                 case Type.input:
@@ -121,6 +140,7 @@ public class Session : MonoBehaviour
 
                 case Type.rank:
                     answeredType = Type.rank;
+                    Debug.Log("Ans: " + answeredType);
                     // fönster som låter deltagarna lägga varandra i en rangordning
                     currentQuestion = GetComponent<RankQuestion>();
                     currentQuestion.Rebuild(allQuestions[qInd].prompt, participants, null);
@@ -132,7 +152,7 @@ public class Session : MonoBehaviour
                     break;
 
                 case Type.single:
-                    answeredType = Type.multi;
+                    answeredType = Type.single;
                     // fönster som riktar en fråga till en specifik deltagare, baserat på en tidigare (ranking)fråga
                     // som det funkar nu så antar frågor typade med single att det har lagts till ett answer till listan
                     // answers för varje följdfråga som ställs, och att dessa frågor ställts i samma ordning som följdfrågorna.
