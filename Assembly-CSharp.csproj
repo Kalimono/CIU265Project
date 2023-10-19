@@ -69,12 +69,12 @@
     <Compile Include="Assets/UI/Ranking/DragAndDropManipulator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/UI/SingleOut/SingleOut.uss" />
     <None Include="Assets/UI/Startup/Startup.uss" />
+    <None Include="Assets/UI/SingleOut/SingleOut.uss" />
+    <None Include="Assets/UI/Startup/Startup.uxml" />
     <None Include="Assets/UI/Ranking/DragAndDropWindow.uss" />
     <None Include="Assets/UI/SingleOut/SingleOut.uxml" />
     <None Include="Assets/UI/NameEntry/NameEntry.uxml" />
-    <None Include="Assets/UI/Startup/Startup.uxml" />
     <None Include="Assets/UI/NameEntry/NameEntry.uss" />
     <None Include="Assets/UI/Ranking/DragDrop.uxml" />
   </ItemGroup>

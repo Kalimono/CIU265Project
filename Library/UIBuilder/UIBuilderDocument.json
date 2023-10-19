@@ -32,7 +32,7 @@
                 "m_OpenendVisualTreeAssetOldPath": "Assets/UI/Startup/Startup.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
-                    "guid": "4a81593c209d940ab8dd4956432e682c",
+                    "guid": "b6ad8234376eb4f2cb1a57fa67062966",
                     "type": 3
                 },
                 "m_ActiveStyleSheet": {
@@ -41,7 +41,7 @@
                     "type": 3
                 },
                 "m_Settings": {
-                    "UxmlGuid": "4a81593c209d940ab8dd4956432e682c",
+                    "UxmlGuid": "b6ad8234376eb4f2cb1a57fa67062966",
                     "UxmlPath": "Assets/UI/Startup/Startup.uxml",
                     "CanvasX": 0,
                     "CanvasY": 0,

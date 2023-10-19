@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine.UIElements;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 
 
 public class Startup : BaseQuestion
@@ -35,17 +36,17 @@ public class Startup : BaseQuestion
         var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/Startup/Startup.uxml");
         var labelFromUXML = visualTree.Instantiate();
 
-        VisualElement startupField = labelFromUXML.Q("startupScreen");
+        VisualElement questionField = labelFromUXML.Q("root");
 
         Button finishButton = new Button();
         finishButton.RegisterCallback<ClickEvent>(FinishQuestion);
-        startupField.Add(finishButton);
+        questionField.Add(finishButton);
         //finishButton.transform.position = new Vector2(15.0f, 100.0f);
 
-        TextElement introText = new TextElement();
-        introText.text = prompt;
-        startupField.Add(introText);
-        //introText.transform.position = new Vector2(15.0f, 0.0f);
+        TextElement question = new TextElement();
+        question.text = prompt;
+        questionField.Add(question);
+        //question.transform.position = new Vector2(15.0f, 0.0f);
 
         
 
@@ -54,4 +55,6 @@ public class Startup : BaseQuestion
         var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/UI/Startup/Startup.uss");
         
     }
+
+
 }
