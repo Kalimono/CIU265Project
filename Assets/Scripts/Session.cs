@@ -15,6 +15,7 @@ public class Session : MonoBehaviour
     int qInd;
     Type answeredType;
     bool namesDone;
+    bool namesStarted;
 
     // Start is called before the first frame update
     void Start()
@@ -71,11 +72,13 @@ public class Session : MonoBehaviour
 
     private bool EnterNames()
     {
-        currentQuestion = GetComponent<NameEntry>();
-        currentQuestion.Rebuild("please enter your names", null, null);
-        answeredType = Type.names;
-
-        
+        if (!namesStarted)
+        {
+            currentQuestion = GetComponent<NameEntry>();
+            currentQuestion.Rebuild("please enter your names", null, null);
+            answeredType = Type.names;
+            namesStarted = true;
+        }
         return currentQuestion.finished;
     }
 
@@ -84,6 +87,8 @@ public class Session : MonoBehaviour
     {
         
         bool start = StartupSession();
+
+
 
         if (start && !namesDone)
             namesDone = EnterNames();

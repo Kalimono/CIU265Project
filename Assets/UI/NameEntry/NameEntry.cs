@@ -7,20 +7,23 @@ using UnityEngine.UIElements;
 public class NameEntry : BaseQuestion
 {
     UIDocument doc;
-    string txt;
+    //string txt;
     VisualElement qf;
+    TextField textField;
 
     List<string> participants;
 
     public override void Rebuild(string prompt, List<string> names, bool? first)
     {
+        Debug.Log("REBUILT");
+        participants = new List<string>();
         doc = GetComponent<UIDocument>();
         doc.rootVisualElement.Clear();
         // Each editor window contains a root VisualElement object
         //VisualElement root = rootVisualElement;
 
         // Import UXML
-        VisualElement root = doc.rootVisualElement;// AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/DropDownUXML.uxml");
+        VisualElement root = doc.rootVisualElement;
         root.style.alignItems = Align.FlexEnd;
         root.style.flexDirection = FlexDirection.Row;
 
@@ -30,16 +33,18 @@ public class NameEntry : BaseQuestion
 
 
         VisualElement questionField = labelFromUXML.Q("questionField");
+        textField = labelFromUXML.Q<TextField>();
         qf = questionField;
         TextElement question = new TextElement();
         question.text = prompt;
         questionField.Add(question);
-        question.transform.position = new Vector2(15.0f, 50.0f);
-
-        txt = question.text;
+        question.transform.position = new Vector2(15.0f, -200.0f);
 
         Button myBtn = labelFromUXML.Q<Button>("enterName");
-        myBtn.RegisterCallback<ClickEvent>(FinishQuestion);
+        myBtn.RegisterCallback<ClickEvent>(AddName);
+
+        Button finishButton = labelFromUXML.Q<Button>("finish");
+        finishButton.RegisterCallback<ClickEvent>(FinishQuestion);
 
         root.Add(labelFromUXML);
 
@@ -49,17 +54,30 @@ public class NameEntry : BaseQuestion
 
     }
 
+    private void AddName(ClickEvent evt)
+    {
+        if (textField.text.Length < 1) return;
+        participants.Add(textField.text);
+        Debug.Log(participants.Count);
+        Debug.Log(participants[0]);
+        string txt = textField.text;
+        textField.SetValueWithoutNotify("");
+        TextElement te = new TextElement();
+        te.text = txt;
+        
+        qf.Add(te);
+    }
+
     public override void FinishQuestion(ClickEvent evt)
     {   
-        participants.Add("");
-        Debug.Log("FINISH");
-        if (participants.Count >= 3) {
+        if (participants.Count >= 5) {
             finished = true;
         }
     }
 
     public override Answer GetAnswer()
     {
+        Debug.Log(participants[0]);
         return new Answer(participants, null);
     }
 

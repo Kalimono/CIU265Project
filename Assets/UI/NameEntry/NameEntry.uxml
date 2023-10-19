@@ -4,7 +4,8 @@
         <ui:VisualElement name="slots" style="flex-direction: row;">
             <ui:VisualElement name="questionField" style="flex-grow: 1; background-color: rgb(255, 255, 255); width: 300px; height: 365px; align-items: center; justify-content: center;">
                 <ui:TextField picking-mode="Ignore" label="Enter name" max-length="10" />
-                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="enterName" />
+                <ui:Button text="Add Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="enterName" />
+                <ui:Button text="Finish" parse-escape-sequences="true" display-tooltip-when-elided="true" name="finish" />
             </ui:VisualElement>
             <ui:VisualElement style="flex-grow: 1; width: 20px; background-color: rgb(255, 255, 255);" />
         </ui:VisualElement>

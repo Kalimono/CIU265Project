@@ -29,10 +29,10 @@
                 "m_VisualTreeAssetBackup": {
                     "instanceID": 0
                 },
-                "m_OpenendVisualTreeAssetOldPath": "Assets/UI/Startup/Startup.uxml",
+                "m_OpenendVisualTreeAssetOldPath": "Assets/UI/NameEntry/NameEntry.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
-                    "guid": "b6ad8234376eb4f2cb1a57fa67062966",
+                    "guid": "a8ec3490ed0a8421aad6413551427663",
                     "type": 3
                 },
                 "m_ActiveStyleSheet": {
@@ -41,8 +41,8 @@
                     "type": 3
                 },
                 "m_Settings": {
-                    "UxmlGuid": "b6ad8234376eb4f2cb1a57fa67062966",
-                    "UxmlPath": "Assets/UI/Startup/Startup.uxml",
+                    "UxmlGuid": "a8ec3490ed0a8421aad6413551427663",
+                    "UxmlPath": "Assets/NameEntry/NameEntry.uxml",
                     "CanvasX": 0,
                     "CanvasY": 0,
                     "CanvasWidth": 350,
