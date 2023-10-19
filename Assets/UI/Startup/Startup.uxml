@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Ranking/DragAndDropWindow.uss?fileID=7433441132597879392&amp;guid=271ed4616d16f44b4b5af006669894d7&amp;type=3#DragAndDropWindow" />
+    <ui:VisualElement name="root" style="flex-grow: 1; flex-direction: column; justify-content: center; width: auto; background-color: rgb(255, 255, 255); height: auto;">
+        <ui:VisualElement name="startupScreen" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

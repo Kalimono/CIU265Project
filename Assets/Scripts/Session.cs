@@ -6,7 +6,6 @@ using UnityEngine.Audio;
 
 public class Session : MonoBehaviour
 {
-    // håller koll på vilken följdfråga som står på tur
     AudioSource a;
     AudioMixerGroup amg;
     List<string> participants;
@@ -57,18 +56,35 @@ public class Session : MonoBehaviour
         allQuestions.Add(new Question(Type.single, "Did you mean the animal or?"));
         allQuestions.Add(new Question(Type.single, "Do you believe i pass the turing test?"));
 
+        currentQuestion = GetComponent<Startup>();
+        currentQuestion.Rebuild("Welcome!", participants, null);
+
+
+    }
+
+    private bool StartupSession()
+    {
+        return currentQuestion.finished;
+    }
+
+    private bool EnterNames()
+    {
         currentQuestion = GetComponent<NameEntry>();
         currentQuestion.Rebuild("please enter your names", null, null);
         answeredType = Type.names;
 
         qInd = -1;
-
-
+        return currentQuestion.finished;
     }
 
     // Update is called once per frame
     void Update()
     {
+        bool namesDone = false;
+        bool start = StartupSession();
+
+        if (start)
+            namesDone = EnterNames();
 
         // Skriva in namn
         // returvärdet går in i en lista kallad participants,
@@ -78,7 +94,7 @@ public class Session : MonoBehaviour
         // från GetAnswer(). Dessutom ska NameEntry.FinishQuestion vara villkorad på om OK antal namn fyllts i.
         
 
-        if (currentQuestion.finished)
+        if (currentQuestion.finished && namesDone)
         {
             // redo för nästa fråga
             qInd++;
