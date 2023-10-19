@@ -12,12 +12,6 @@ public class NameEntry : BaseQuestion
 
     List<string> participants;
 
-    public override void FinishQuestion(ClickEvent evt)
-    {
-        Debug.Log("FINISH");
-        finished = true;
-    }
-
     public override void Rebuild(string prompt, List<string> names, bool? first)
     {
         Debug.Log("Built");
@@ -56,9 +50,18 @@ public class NameEntry : BaseQuestion
 
     }
 
+    public override void FinishQuestion(ClickEvent evt)
+    {   
+        participants.Add("");
+        Debug.Log("FINISH");
+        if (participants.Count >= 3) {
+            finished = true;
+        }
+    }
+
     public override Answer GetAnswer()
     {
-        return new Answer(new List<string>() { "henrik", "john", "pernila" }, null);
+        return new Answer(participants, null);
     }
 
 }
