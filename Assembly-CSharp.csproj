@@ -81,7 +81,7 @@
     <None Include="Assets/UI/SingleOut/SingleOut.uxml" />
     <None Include="Assets/UI/NameEntry/NameEntry.uxml" />
     <None Include="Assets/UI/NameEntry/NameEntry.uss" />
-    <None Include="Assets/UI/Startup/startup.uss" />
+    <None Include="Assets/UI/Startup/Startup.uss" />
     <None Include="Assets/UI/Ranking/DragDrop.uxml" />
     <None Include="Assets/UI/Blank/blank.uss" />
     <None Include="Assets/UI/Blank/blank.uxml" />
