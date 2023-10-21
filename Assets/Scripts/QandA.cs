@@ -42,7 +42,7 @@ public class Question {
         return this;
     }
 
-    public Question withFollowUp(Question q, bool instant)
+    public Question withFollowUp(Question q, bool instant = false)
     {
         followUp = q;
         instantFollowUp = instant;

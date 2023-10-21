@@ -8,7 +8,8 @@ public partial class Session : MonoBehaviour
 {
     private void BuildQuestionaire()
     {
-        InitQuestionaire();
+        _InitQuestionaire();
+
 
         allQuestions.Add(new Question(Qtype.start, ""));
 
@@ -16,27 +17,37 @@ public partial class Session : MonoBehaviour
 
         allQuestions.Add(
             new Question(Qtype.rank, "Which group member has the longest reach?")
-            .withFollowUp(new Question(Qtype.singleOut, "Has !PFIRST played basketball?"), instant: false));
+            .withFollowUp(new Question(Qtype.singleOut, "Has !PFIRST played basketball?")));
+
         allQuestions.Add(
             new Question(Qtype.rank, "Who is best suited to handle small animals?")
-            .withFollowUp(new Question(Qtype.singleOut, "!PFIRST, Do you try to save worms that are crossing the street?"), instant: false)
+            .withFollowUp(new Question(Qtype.singleOut, "!PFIRST, Do you try to save worms that are crossing the street?"))
             .withArduinoEvt(new Shake()));
-        CreateDiv();
+
+
+        _DoFollowUps();
+
+
         allQuestions.Add(
             new Question(Qtype.rank, "Who is the most hygienic?")
             .withFollowUp(new Question(Qtype.singleOut, "!PFIRST, in light of your top-ranking status with regard to hygiene, we would greatly appreciate your insights on ways in which the lowest-ranked participant, !PLAST, could enhance their hygiene practices."), instant: false));
+
         allQuestions.Add(
             new Question(Qtype.rank, "Which person in the group is most likely to pick up a hitchhiker?")
-            .withFollowUp(new Question(Qtype.singleOut, "!PFIRST, do you like movies about gladiators?"), instant: false));
+            .withFollowUp(new Question(Qtype.singleOut, "!PFIRST, do you like movies about gladiators?")));
+
         allQuestions.Add(
             new Question(Qtype.rank, "Who is the most law-abiding?")
-            .withFollowUp(new Question(Qtype.singleOut, "Has !PLAST ever broken the law?"), instant: false)
+            .withFollowUp(new Question(Qtype.singleOut, "Has !PLAST ever broken the law?"))
             .withArduinoEvt(new Shake())
             );
 
-        CreateDiv();
+
+        _DoFollowUps();
+
 
         //rankQuestion.Add(new Question(Type.rank, "Who is the best juggler?"));
+
 
         allQuestions.Add(new Question(Qtype.rank, "Who has the highest pain threshold?").withFollowUp
             (new Question(Qtype.singleOut, "Do you dare to put your hand in the box?"), instant: true)
@@ -48,13 +59,16 @@ public partial class Session : MonoBehaviour
             .withMusicEvt(new AddDistortion()));
 
         allQuestions.Add(new Question(Qtype.rank, "Who is most interested in true-crime?")
-            .withFollowUp(new Question(Qtype.singleOut, "!PFIRST, Why do you like it?"), instant: false));
-        allQuestions.Add(new Question(Qtype.rank, "Who would enjoy being a mole for a day?")
-            .withFollowUp(new Question(Qtype.singleOut, "Did you mean the animal or?"), instant: false));
-        allQuestions.Add(new Question(Qtype.rank, "Is there anyone in the group that does not believe computers are conscious?")
-            .withFollowUp(new Question(Qtype.singleOut, "Do you believe i pass the turing test?"), instant: false));
+            .withFollowUp(new Question(Qtype.singleOut, "!PFIRST, Why do you like it?")));
 
-        CreateDiv();
+        allQuestions.Add(new Question(Qtype.rank, "Who would enjoy being a mole for a day?")
+            .withFollowUp(new Question(Qtype.singleOut, "Did you mean the animal or?")));
+
+        allQuestions.Add(new Question(Qtype.rank, "Is there anyone in the group that does not believe computers are conscious?")
+            .withFollowUp(new Question(Qtype.singleOut, "Do you believe i pass the turing test?")));
+
+
+        _DoFollowUps();
 
         
 
@@ -62,12 +76,12 @@ public partial class Session : MonoBehaviour
 
 
 
-    private void CreateDiv()
+    private void _DoFollowUps()
     {
         allQuestions.Add(new Question(Qtype.divider, ""));
     }
 
-    private void InitQuestionaire()
+    private void _InitQuestionaire()
     {
         allQuestions.Add(new Question(Qtype.divider, ""));
         currentScreen = GetComponent<Blank>();
