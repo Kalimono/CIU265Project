@@ -5,12 +5,13 @@ using UnityEngine.Audio;
 
 public enum Qtype
 {
+    start,
     names,
     rank,
     multi,
     single,
     input,
-    unspec
+    divider
 }
 
 public class Question {

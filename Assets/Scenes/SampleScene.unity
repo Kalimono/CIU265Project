@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 932896228}
   - component: {fileID: 932896230}
   - component: {fileID: 932896231}
+  - component: {fileID: 932896233}
   - component: {fileID: 932896229}
   m_Layer: 5
   m_Name: TheFormOfPerception
@@ -428,6 +429,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25f312405d74448c6af81f6036dc5aef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finished: 0
+--- !u!114 &932896233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932896223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd03587c240db43f9b6be2cb71e32b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   finished: 0
