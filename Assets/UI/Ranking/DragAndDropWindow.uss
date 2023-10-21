@@ -3,6 +3,11 @@
     height: 60px;
     margin: 0;
     background-color: rgb(255, 255, 255);
+    border-color: rgb(0,0,0);
+    border-bottom-width: 1;
+    border-left-width: 1;
+    border-radius: 4;
+    
 }
 
 .slot_row {
@@ -31,4 +36,8 @@
 
 #slots {
     flex-direction: column;
+}
+
+.continue {
+    width: 70;
 }

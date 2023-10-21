@@ -64,19 +64,21 @@
     <Compile Include="Assets/Scripts/ArduinoEvents.cs" />
     <Compile Include="Assets/Scripts/ArduinoCommunications.cs" />
     <Compile Include="Assets/Scripts/QandA.cs" />
+    <Compile Include="Assets/Scripts/MusicEvent.cs" />
     <Compile Include="Assets/Scripts/Session.cs" />
     <Compile Include="Assets/UI/SingleOut/SingleOut.cs" />
     <Compile Include="Assets/UI/BaseQuestion.cs" />
     <Compile Include="Assets/UI/Ranking/DragAndDropManipulator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/UI/Startup/Startup.uss" />
+    <None Include="Assets/UI/myStyle.uss" />
     <None Include="Assets/UI/SingleOut/SingleOut.uss" />
     <None Include="Assets/UI/Startup/Startup.uxml" />
     <None Include="Assets/UI/Ranking/DragAndDropWindow.uss" />
     <None Include="Assets/UI/SingleOut/SingleOut.uxml" />
     <None Include="Assets/UI/NameEntry/NameEntry.uxml" />
     <None Include="Assets/UI/NameEntry/NameEntry.uss" />
+    <None Include="Assets/UI/Startup/startup.uss" />
     <None Include="Assets/UI/Ranking/DragDrop.uxml" />
   </ItemGroup>
   <ItemGroup>

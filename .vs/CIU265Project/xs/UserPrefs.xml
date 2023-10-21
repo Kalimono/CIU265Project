@@ -1,19 +1,22 @@
 ﻿<Properties StartupConfiguration="{304CF1B4-805E-7DC8-9CFD-4275C5630AE3}|">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="edbc8e00-370b-46e7-a42d-1dfd12bf931c" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="eb87e165-ed90-4bc6-a6de-111e889321fc" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Session.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Session.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CIU265Project" expanded="True">
+          <Node name="CIU265Project">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="QandA.cs" selected="True" />
+                <Node name="Session.cs" selected="True" />
               </Node>
               <Node name="UI" expanded="True">
                 <Node name="NameEntry" expanded="True" />

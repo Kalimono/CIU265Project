@@ -1,4 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/Ranking/DragAndDropWindow.uss?fileID=7433441132597879392&amp;guid=271ed4616d16f44b4b5af006669894d7&amp;type=3#DragAndDropWindow" />
-    <ui:VisualElement name="root" style="flex-grow: 1; flex-direction: row; justify-content: center; width: auto; background-color: rgb(255, 255, 255); height: auto;" />
+    <Style src="project://database/Assets/UI/Startup/startup.uss?fileID=7433441132597879392&amp;guid=6b3767fdf2be34a19b32fefbf1be41b3&amp;type=3#startup" />
+    <ui:VisualElement name="root" style="flex-grow: 1; flex-direction: column; justify-content: space-around; width: auto; background-color: rgb(255, 255, 255); height: auto; align-items: center; align-self: stretch; padding-top: 50px; padding-right: 50px; padding-bottom: 50px; padding-left: 50px;">
+        <ui:VisualElement style="flex-grow: 1; width: 323px; left: -20px;">
+            <ui:Label tabindex="-1" text="Welcome!" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold;" />
+            <ui:Label tabindex="-1" text="This action room has two doors. &#10;You do not yet know which one to open.&#10;In order for you to find out, you must first&#10;answer some questions about your team.&#10;&#10;We must also inform you that the action&#10; room can be quite uncomfortable. &#10;Are you still in?&#10;Press continue to start!&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-text-align: upper-left; width: 310px; background-color: rgb(0, 0, 0); color: rgb(255, 170, 0);" />
+            <ui:Button text="Continue" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+        </ui:VisualElement>
+    </ui:VisualElement>
 </ui:UXML>

@@ -7,8 +7,13 @@ public abstract class BaseQuestion : MonoBehaviour
 {
     public Question MyQ;
     public bool finished;
-    List<string>? ranking;
-    List<string>? choice;
+    protected List<string>? ranking;
+    protected List<string>? choice;
+    protected Label errorLabel;
+    protected UIDocument doc;
+    protected VisualElement root;
+    protected VisualElement labelFromUXML;
+    protected VisualTreeAsset visualTree;
 
     public virtual Answer GetAnswer()
     {
@@ -22,6 +27,16 @@ public abstract class BaseQuestion : MonoBehaviour
     {
         MyQ = myQ;
         finished = false;
+
+        doc = GetComponent<UIDocument>();
+        doc.rootVisualElement.Clear();
+        root = doc.rootVisualElement;
+
+        errorLabel = new Label();
+        errorLabel.style.position = Position.Absolute;
+        errorLabel.transform.position = Vector2.zero;
+        errorLabel.text = " all is good ";
+
     }
 
 

@@ -6,9 +6,6 @@ using UnityEngine.UIElements;
 
 public class NameEntry : BaseQuestion
 {
-    UIDocument doc;
-    //string txt;
-    VisualElement qf;
     TextField textField;
 
     List<string> participants;
@@ -17,28 +14,28 @@ public class NameEntry : BaseQuestion
     {
         base.Rebuild(myQ);
         participants = new List<string>();
-        doc = GetComponent<UIDocument>();
-        doc.rootVisualElement.Clear();
-        // Each editor window contains a root VisualElement object
-        //VisualElement root = rootVisualElement;
-
-        // Import UXML
-        VisualElement root = doc.rootVisualElement;
-        root.style.alignItems = Align.FlexEnd;
-        root.style.flexDirection = FlexDirection.Row;
 
 
-        var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/NameEntry/NameEntry.uxml");
-        var labelFromUXML = visualTree.Instantiate();
+        visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/NameEntry/NameEntry.uxml");
+        labelFromUXML = visualTree.Instantiate();
+
 
 
         VisualElement questionField = labelFromUXML.Q("questionField");
+        Image img = new Image();
+        img.image = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/UI/powered.png");
+        img.style.position = Position.Absolute;
+        img.style.scale = new StyleScale(new Vector2(0.1f, 0.1f));
+        //questionField.Add(img);
+        //questionField.Add(powered);
+        img.transform.position = new Vector2(400, 100);
+
         textField = labelFromUXML.Q<TextField>();
-        qf = questionField;
+        VisualElement qf = questionField;
         TextElement question = new TextElement();
         question.text = myQ.prompt;
         questionField.Add(question);
-        question.transform.position = new Vector2(15.0f, -200.0f);
+        //question.transform.position = new Vector2(15.0f, -200.0f);
 
         Button myBtn = labelFromUXML.Q<Button>("enterName");
         myBtn.RegisterCallback<ClickEvent>(AddName);
@@ -48,9 +45,7 @@ public class NameEntry : BaseQuestion
 
         root.Add(labelFromUXML);
 
-        // A stylesheet can be added to a VisualElement.
-        // The style will be applied to the VisualElement and all of its children.
-        var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/UI/DragAndDropWindow.uss");        
+        var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/UI/myStyle.uss");
 
     }
 
@@ -58,14 +53,13 @@ public class NameEntry : BaseQuestion
     {
         if (textField.text.Length < 1) return;
         participants.Add(textField.text);
-        Debug.Log(participants.Count);
-        Debug.Log(participants[0]);
         string txt = textField.text;
         textField.SetValueWithoutNotify("");
         TextElement te = new TextElement();
         te.text = txt;
-        
-        qf.Add(te);
+        VisualElement nf = root.Q("namefield");
+
+        nf.Add(te);
     }
 
     public override void FinishQuestion(ClickEvent evt)

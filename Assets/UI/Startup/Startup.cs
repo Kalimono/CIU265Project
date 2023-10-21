@@ -10,7 +10,7 @@ using System.Text;
 
 public class Startup : BaseQuestion
 {
-    UIDocument doc;
+    //UIDocument doc;
 
     public override void FinishQuestion(ClickEvent evt)
     {
@@ -26,33 +26,18 @@ public class Startup : BaseQuestion
     public override void Rebuild(Question myQ)
     {
         base.Rebuild(myQ);
-        doc = GetComponent<UIDocument>();
-        doc.rootVisualElement.Clear();
 
-        // Import UXML
-        VisualElement root = doc.rootVisualElement;
-        root.style.alignItems = Align.FlexEnd;
-        root.style.flexDirection = FlexDirection.Row;
-        var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/Startup/Startup.uxml");
-        var labelFromUXML = visualTree.Instantiate();
-
-        VisualElement questionField = labelFromUXML.Q("root");
-
-        Button finishButton = new Button();
-        finishButton.RegisterCallback<ClickEvent>(FinishQuestion);
-        questionField.Add(finishButton);
-        //finishButton.transform.position = new Vector2(15.0f, 100.0f);
-
-        TextElement question = new TextElement();
-        question.text = myQ.prompt;
-        questionField.Add(question);
-        //question.transform.position = new Vector2(15.0f, 0.0f);
-
-        
-
+        visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/Startup/Startup.uxml");
+        labelFromUXML = visualTree.Instantiate();
         root.Add(labelFromUXML);
 
-        var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/UI/Startup/Startup.uss");
+        Button finishButton = labelFromUXML.Q<Button>();
+        finishButton.RegisterCallback<ClickEvent>(FinishQuestion);
+
+        var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/UI/myStyle.uss");
+        
+
+
         
     }
 

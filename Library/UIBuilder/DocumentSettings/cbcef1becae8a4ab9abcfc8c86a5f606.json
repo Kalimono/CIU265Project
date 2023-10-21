@@ -3,13 +3,13 @@
     "UxmlPath": "Assets/UI/DropDownUXML.uxml",
     "CanvasX": 0,
     "CanvasY": 0,
-    "CanvasWidth": 350,
+    "CanvasWidth": 686,
     "CanvasHeight": 450,
     "MatchGameView": false,
     "ZoomScale": 1.0,
     "PanOffset": {
-        "x": 353.4361572265625,
-        "y": 73.21601867675781
+        "x": 194.61224365234376,
+        "y": 294.05242919921877
     },
     "ColorModeBackgroundOpacity": 1.0,
     "ImageModeCanvasBackgroundOpacity": 1.0,

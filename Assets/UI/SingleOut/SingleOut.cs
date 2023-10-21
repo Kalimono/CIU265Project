@@ -10,7 +10,7 @@ using System.Text;
 
 public class SingleOut : BaseQuestion
 {
-    UIDocument doc;
+    //UIDocument doc;
     List<VisualElement> draggables;
 
     public override void FinishQuestion(ClickEvent evt)
@@ -29,15 +29,11 @@ public class SingleOut : BaseQuestion
     public override void Rebuild(Question myQ)
     {
         base.Rebuild(myQ);
-        doc = GetComponent<UIDocument>();
-        doc.rootVisualElement.Clear();
 
-        // Import UXML
-        VisualElement root = doc.rootVisualElement;
         root.style.alignItems = Align.FlexEnd;
         root.style.flexDirection = FlexDirection.Row;
-        var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/SingleOut/SingleOut.uxml");
-        var labelFromUXML = visualTree.Instantiate();
+        visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/SingleOut/SingleOut.uxml");
+        labelFromUXML = visualTree.Instantiate();
 
         VisualElement questionField = labelFromUXML.Q("questionField");
 
@@ -55,8 +51,8 @@ public class SingleOut : BaseQuestion
 
         root.Add(labelFromUXML);
 
-        var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/UI/DragAndDropWindow.uss");
-        
+        var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/UI/myStyle.uss");
+
     }
 
 

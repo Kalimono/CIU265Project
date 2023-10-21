@@ -19,7 +19,7 @@ public class Session : MonoBehaviour
     {
         a = GetComponent<AudioSource>();
         amg = a.outputAudioMixerGroup;
-        amg.audioMixer.TransitionToSnapshots(new AudioMixerSnapshot[] { amg.audioMixer.FindSnapshot("distorted")}, new float[] { 1.0f, }, 1.0f );
+        //amg.audioMixer.TransitionToSnapshots(new AudioMixerSnapshot[] { amg.audioMixer.FindSnapshot("distorted")}, new float[] { 1.0f, }, 1.0f );
             
         participants = new List<string>();
         allQuestions = new List<Question>();
@@ -46,10 +46,12 @@ public class Session : MonoBehaviour
         //rankQuestion.Add(new Question(Type.rank, "Who is the best juggler?"));
         allQuestions.Add(new Question(Qtype.unspec, ""));
         allQuestions.Add(new Question(Qtype.rank, "Who has the highest pain threshold?").withFollowUp
-            (new Question(Qtype.single, "Do you dare to put your hand in the box?"), instant: true));
+            (new Question(Qtype.single, "Do you dare to put your hand in the box?"), instant: true)
+            .withMusicEvt(new RemoveHighPass()));
 
         allQuestions.Add(new Question(Qtype.rank, "Who has the most knowledge in the fantasy genre of fiction?").withFollowUp(
-            new Question(Qtype.single, "Share reading tips"), instant: true));
+            new Question(Qtype.single, "Share reading tips"), instant: true)
+            .withMusicEvt(new AddDistortion()));
 
         allQuestions.Add(new Question(Qtype.rank, "Who is most interested in true-crime?")
             .withFollowUp(new Question(Qtype.single, "!PFIRST, Why do you like it?"), instant: false));
@@ -60,10 +62,15 @@ public class Session : MonoBehaviour
 
 
         currentQuestion = GetComponent<Startup>();
-        currentQuestion.Rebuild(new Question(Qtype.unspec, "Welcome!"));
+        currentQuestion.Rebuild(new Question(Qtype.unspec,
+            "Hello!\n" +
+            "Before entering a door, please fill out this form.\n" +
+            "You will find out which door to enter at the end!" +
+            "\nStart by clicking the button."));
         namesDone = false;
 
     }
+    
 
     private bool StartupSession()
     {
@@ -75,7 +82,7 @@ public class Session : MonoBehaviour
         if (!namesStarted)
         {
             currentQuestion = GetComponent<NameEntry>();
-            currentQuestion.Rebuild(new Question(Qtype.names, "Please enter your names"));
+            currentQuestion.Rebuild(new Question(Qtype.names, "Please put all your names in here, one at a time:"));
             namesStarted = true;
         }
         return currentQuestion.finished;
@@ -98,6 +105,15 @@ public class Session : MonoBehaviour
             currentQuestion.MyQ.performEvent("hey");
     }
 
+    private void CheckMusic()
+    {
+        if (currentQuestion.MyQ.HasMusicEvent)
+        {
+            currentQuestion.MyQ.performMusicEvent(amg, null);
+            print("yes");
+        }
+    }
+
 
     bool namesDone;
     bool namesStarted;
@@ -117,6 +133,7 @@ public class Session : MonoBehaviour
             allQuestions.RemoveAt(0);
             CheckFollowUp();
             CheckArduino();
+            CheckMusic();
 
             switch (allQuestions[0].type)
             {

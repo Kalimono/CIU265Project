@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public enum Qtype
 {
@@ -12,25 +13,18 @@ public enum Qtype
     unspec
 }
 
-//public enum Category
-//{
-//    ethical,
-//    physical,
-//    intellectual
-//}
-
-
-
 public class Question {
     public Qtype type;
     public string prompt;
     public List<string>? orderedNames;
     public Question? followUp;
     public ArduinoEvent? arduinoEvt;
+    public MusicEvent? musicEvt;
 
     public bool HasNames { get => (orderedNames != null); }
     public bool HasFollowUp { get => (followUp != null); }
     public bool HasArduinoEvent { get => (arduinoEvt != null); }
+    public bool HasMusicEvent { get => (musicEvt != null); }
     public bool instantFollowUp;
 
 
@@ -59,11 +53,27 @@ public class Question {
         return this;
     }
 
+    public Question withMusicEvt(MusicEvent evt)
+    {
+        musicEvt = evt;
+        return this;
+    }
+
+
+
     public void performEvent(string arg)
     {
-        if (arduinoEvt != null)
+        if (HasArduinoEvent)
         {
             arduinoEvt.PerformEvent();
+        }
+    }
+
+    public void performMusicEvent(AudioMixerGroup amg, bool? TF)
+    {
+        if (HasMusicEvent)
+        {
+            musicEvt.Perform(amg, TF);
         }
     }
 

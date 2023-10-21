@@ -9,8 +9,9 @@ using System.Collections.Generic;
 
 public class RankQuestion : BaseQuestion
 {
-    UIDocument doc;
+    
     List<VisualElement> draggables;
+    
 
     public override void FinishQuestion(ClickEvent evt)
     {
@@ -33,19 +34,16 @@ public class RankQuestion : BaseQuestion
     public override void Rebuild(Question myQ)
     {
         base.Rebuild(myQ);
-        doc = GetComponent<UIDocument>();
-        doc.rootVisualElement.Clear();
-
-        // Import UXML
-        VisualElement root = doc.rootVisualElement;
+        
         root.style.alignItems = Align.FlexEnd;
         root.style.flexDirection = FlexDirection.Row;
-        var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/Ranking/DragDrop.uxml");
-        var labelFromUXML = visualTree.Instantiate();
+        visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/Ranking/DragDrop.uxml");
+        labelFromUXML = visualTree.Instantiate();
 
         VisualElement questionField = labelFromUXML.Q("questionField");
 
         Button finishButton = new Button();
+        finishButton.AddToClassList("continue");
         finishButton.RegisterCallback<ClickEvent>(FinishQuestion);
         questionField.Add(finishButton);
         finishButton.transform.position = new Vector2(15.0f, 200.0f);
@@ -59,7 +57,7 @@ public class RankQuestion : BaseQuestion
 
         root.Add(labelFromUXML);
 
-        var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/UI/DragAndDropWindow.uss");
+        //var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/UI/myStyle.uss");
 
 
         draggables = new List<VisualElement>();
