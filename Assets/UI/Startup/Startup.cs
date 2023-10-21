@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
-public class Startup : BaseQuestion
+public class Startup : BaseScreen
 {
     //UIDocument doc;
 

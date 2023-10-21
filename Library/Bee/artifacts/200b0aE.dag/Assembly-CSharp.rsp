@@ -360,7 +360,7 @@
 "Assets/Scripts/Session.cs"
 "Assets/Scripts/SessionBuilding.cs"
 "Assets/Scripts/SessionCheckers.cs"
-"Assets/UI/BaseQuestion.cs"
+"Assets/UI/BaseScreen.cs"
 "Assets/UI/Blank/Blank.cs"
 "Assets/UI/NameEntry/NameEntry.cs"
 "Assets/UI/Ranking/DragAndDropManipulator.cs"

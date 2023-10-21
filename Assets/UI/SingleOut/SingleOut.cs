@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
-public class SingleOut : BaseQuestion
+public class SingleOut : BaseScreen
 {
     //UIDocument doc;
     List<VisualElement> draggables;

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity;
 using UnityEngine.UIElements;
 
-public class NameEntry : BaseQuestion
+public class NameEntry : BaseScreen
 {
     TextField textField;
 
