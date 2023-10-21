@@ -28,17 +28,8 @@ public partial class Session : MonoBehaviour
 
     }
     
-
-
-    private Question SetNextQuestion()
-    {
-        allQuestions.RemoveAt(0);
-        return allQuestions[0];
-    }
-
-
     
-
+    
     void Update()
     {
 
@@ -58,6 +49,7 @@ public partial class Session : MonoBehaviour
                     currentQuestion = GetComponent<Startup>();
                     currentQuestion.Rebuild(question);
                     break;
+
                 case Qtype.names:
                     currentQuestion = GetComponent<NameEntry>();
                     currentQuestion.Rebuild(question);
@@ -76,15 +68,14 @@ public partial class Session : MonoBehaviour
                     //TODO fönster som låter användare välja mellan flera alternativ
                     break;
 
-                case Qtype.single:
+                case Qtype.singleOut:
                     currentQuestion = GetComponent<SingleOut>();
                     currentQuestion.Rebuild(question);
                     break;
+
                 case Qtype.divider:
-                    //currentQuestion.finished = true;
                     currentQuestion = GetComponent<Blank>();
                     currentQuestion.Rebuild(question);
-                    //currentQuestion.finished = true;
                     questionBuffer.Reverse();
                     foreach (Question bufferedQ in questionBuffer)
                     {
@@ -97,6 +88,12 @@ public partial class Session : MonoBehaviour
 
         }
 
+    }
+
+    private Question SetNextQuestion()
+    {
+        allQuestions.RemoveAt(0);
+        return allQuestions[0];
     }
 
 }

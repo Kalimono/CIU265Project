@@ -9,11 +9,12 @@ public enum Qtype
     names,
     rank,
     multi,
-    single,
+    singleOut,
     input,
     divider
 }
 
+#nullable enable
 public class Question {
     public Qtype type;
     public string prompt;
@@ -64,7 +65,7 @@ public class Question {
 
     public void performEvent(string arg)
     {
-        if (HasArduinoEvent)
+        if (arduinoEvt != null)
         {
             arduinoEvt.PerformEvent();
         }
@@ -72,7 +73,7 @@ public class Question {
 
     public void performMusicEvent(AudioMixerGroup amg, bool? TF)
     {
-        if (HasMusicEvent)
+        if (musicEvt != null)
         {
             musicEvt.Perform(amg, TF);
         }

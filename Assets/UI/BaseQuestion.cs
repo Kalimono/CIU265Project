@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+#nullable enable
 public abstract class BaseQuestion : MonoBehaviour
 {
-    public Question MyQ;
+    public Question? MyQ;
     public bool finished;
     protected List<string>? ranking;
     protected List<string>? choice;
-    protected Label errorLabel;
-    protected UIDocument doc;
-    protected VisualElement root;
-    protected VisualElement labelFromUXML;
-    protected VisualTreeAsset visualTree;
+    protected Label? errorLabel;
+    protected UIDocument? doc;
+    protected VisualElement? root;
+    protected VisualElement? labelFromUXML;
+    protected VisualTreeAsset? visualTree;
 
     public virtual Answer GetAnswer()
     {
