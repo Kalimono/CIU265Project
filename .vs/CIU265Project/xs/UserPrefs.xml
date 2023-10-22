@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{304CF1B4-805E-7DC8-9CFD-4275C5630AE3}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UI/Blank/Blank.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Session/Session.cs" Line="33" Column="1" />
+      <File FileName="Assets/UI/Blank/Blank.cs" Line="45" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CIU265Project">
+            <Node name="Assets" expanded="True" selected="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Session" expanded="True" />
+              </Node>
+              <Node name="UI" expanded="True">
+                <Node name="Blank" expanded="True" />
+                <Node name="NameEntry" expanded="True" />
+                <Node name="Ranking" expanded="True" />
+                <Node name="SingleOut" expanded="True" />
+                <Node name="Startup" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5bf6f264-c05f-4220-8d29-3821d7c302ad" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

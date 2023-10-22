@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Startup/startup.uss?fileID=7433441132597879392&amp;guid=6b3767fdf2be34a19b32fefbf1be41b3&amp;type=3#startup" />
+    <ui:VisualElement name="root" style="flex-grow: 1; flex-direction: column; justify-content: space-around; width: auto; background-color: rgb(255, 255, 255); height: auto; align-items: center; align-self: stretch; padding-top: 50px; padding-right: 50px; padding-bottom: 50px; padding-left: 50px;">
+        <ui:Button text="Continue" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+    </ui:VisualElement>
+</ui:UXML>

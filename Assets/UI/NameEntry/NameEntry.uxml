@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="root" style="flex-grow: 1; align-items: center; justify-content: space-between; align-self: center; flex-direction: row;">
+        <ui:VisualElement name="questionField" style="flex-grow: 1; background-color: rgb(255, 255, 255); width: auto; height: 452px; align-items: center; justify-content: space-around; flex-direction: column-reverse; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px;">
+            <ui:TextField picking-mode="Ignore" label="Enter name:" max-length="10" style="min-width: auto; width: 408px; justify-content: space-between; background-color: rgb(0, 255, 207);">
+                <ui:Button text="Add Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="enterName" />
+            </ui:TextField>
+        </ui:VisualElement>
+        <ui:VisualElement name="rightCol" style="flex-grow: 1; justify-content: space-between; background-color: rgb(255, 255, 255); flex-direction: column-reverse; border-left-color: rgb(0, 0, 0); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;">
+            <ui:Button text="Start questionaire" parse-escape-sequences="true" display-tooltip-when-elided="true" name="finish" style="width: 194px;" />
+            <ui:VisualElement name="namefield" style="flex-grow: 1; border-left-color: rgb(255, 255, 255); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; justify-content: center;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

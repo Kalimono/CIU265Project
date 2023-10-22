@@ -1,0 +1,43 @@
+.slot {
+    width: 170px;
+    height: 60px;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0,0,0);
+    border-bottom-width: 1;
+    border-left-width: 1;
+    border-radius: 4;
+    
+}
+
+.slot_row {
+    flex-direction: column;
+}
+
+.object {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    border-radius: 10px;
+    background-color: rgb(200, 200, 200);
+}
+
+.text {
+    width: 70;
+    height: 39;
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    border-radius: 10px;
+    background-color: rgb(200, 200, 0);
+}
+
+#slots {
+    flex-direction: column;
+}
+
+.continue {
+    width: 70;
+}
